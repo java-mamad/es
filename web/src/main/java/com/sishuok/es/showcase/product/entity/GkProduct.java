@@ -16,15 +16,19 @@ import java.util.Date;
 
 /**
  * 产品
- * <p>User: Zhang Kaitao
+ * <p>User: geke
  * <p>Date: 13-2-19 上午9:00
  * <p>Version: 1.0
  */
 @Entity
-@Table(name = "showcase_product")
-public class Product extends BaseEntity<Long> {
-
-    @OneToOne(optional = true)
+@Table(name = "gk_product")
+public class GkProduct extends BaseEntity<Long> {
+	/*@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="product_id")
+    private Long id;*/
+    
+	@OneToOne(optional = true)
     @Fetch(FetchMode.SELECT)
     private Category category;
 

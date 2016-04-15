@@ -2,6 +2,9 @@
  * Copyright (c) 2005-2012 https://github.com/zhangkaitao
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
+ * 
+ * use the spring-aop-4.1.4's AsyncExecutionInterceptor 
+ * Deprecated
  */
 package org.springframework.aop.interceptor;
 
@@ -46,7 +49,8 @@ import java.util.concurrent.Future;
  * @see org.springframework.scheduling.annotation.AsyncAnnotationAdvisor
  * @see org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor
  */
-public class AsyncExecutionInterceptor extends AsyncExecutionAspectSupport
+@Deprecated
+public class AsyncExecutionInterceptorDeprecated extends AsyncExecutionAspectSupport
         implements MethodInterceptor, Ordered {
 
     /**
@@ -54,7 +58,7 @@ public class AsyncExecutionInterceptor extends AsyncExecutionAspectSupport
      * @param executor the {@link java.util.concurrent.Executor} (typically a Spring {@link org.springframework.core.task.AsyncTaskExecutor}
      * or {@link java.util.concurrent.ExecutorService}) to delegate to.
      */
-    public AsyncExecutionInterceptor(Executor executor) {
+    public AsyncExecutionInterceptorDeprecated(Executor executor) {
         super(executor);
     }
 

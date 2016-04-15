@@ -5,16 +5,19 @@
  */
 package com.sishuok.es.showcase.product.repository;
 
+import java.util.List;
+
 import com.sishuok.es.common.repository.BaseRepository;
-import com.sishuok.es.showcase.product.entity.Product;
+import com.sishuok.es.showcase.product.entity.GkProduct;
 
 /**
  * <p>User: Zhang Kaitao
  * <p>Date: 13-2-4 下午3:00
  * <p>Version: 1.0
  */
-public interface ProductRepository extends BaseRepository<Product, Long> {
-	Product findByCategoryId(Long categoryId);
+public interface GkProductRepository extends BaseRepository<GkProduct, Long> {
+	GkProduct findByCategoryId(Long categoryId);
+	List<GkProduct> findAllByName(String name);
 }
 
 

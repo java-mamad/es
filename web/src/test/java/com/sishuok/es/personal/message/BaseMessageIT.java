@@ -11,6 +11,8 @@ import com.sishuok.es.personal.message.service.MessageApi;
 import com.sishuok.es.personal.message.service.MessageService;
 import com.sishuok.es.sys.user.service.BaseUserIT;
 import com.sishuok.es.sys.user.service.UserService;
+
+import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -42,6 +44,7 @@ public abstract class BaseMessageIT extends BaseUserIT {
         content.setContent("abcde");
         message.setContent(content);
         messageApi.send(message);
+        
 
         return message;
     }
